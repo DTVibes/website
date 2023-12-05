@@ -1,0 +1,41 @@
+{{define "header"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href= "static/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Светлый черный фон */
+            color: #ffffff; /* Белый цвет текста */
+        }
+        .cover-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .cover-container header {
+            margin-bottom: auto;
+        }
+
+        .btn-dark {
+            background-color: #000000; /* Черный цвет фона для кнопки */
+            border-color: #000000; /* Черный цвет границы для кнопки */
+        }
+    </style>
+</head>
+<body class="d-flex h-100 text-center text-dark">
+    <div class="cover-container d-flex w-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <h3 class="mb-4">developer</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link fw-bold py-1 px-3 active" aria-current="page" href="#">Главная</a>
+                <a class="nav-link fw-bold py-1 px-3" href="#">Про нас</a>
+                <a class="nav-link fw-bold py-1 px-3" href="#">Контакты</a>
+                <a class="nav-link " href="/create">Создать пост</a>
+            </nav>
+        </header>
+        {{end}}

@@ -1,0 +1,33 @@
+{{define "index"}}
+{{template "header"}}
+
+        <main class="px-3">
+            <h1>Главная страница</h1>
+            <p class="lead">Я вас любил: любовь еще, быть может,
+                В душе моей угасла не совсем;
+                Но пусть она вас больше не тревожит;
+                Я не хочу печалить вас ничем.
+                Я вас любил безмолвно, безнадежно,
+                То робостью, то ревностью томим;
+                Я вас любил так искренно, так нежно,
+                Как дай вам Бог любимой быть другим.</p>
+            {{range .}}
+            <div class = "alert alert-danger">
+                <h2>{{.Title}}</h2>
+                <h2>{{.Anons}}</h2>
+                <a href= "/post/{{.Id}}" class = "btn btn-danger">Читать далее</a>
+
+            {{else}}
+            <p class = "lead">Статей нет!</p>
+
+            {{end}}
+                
+            <p class="lead">
+                <a href="#" class="btn btn-lg btn-dark fw-bold border-light bg-dark">Узнать больше</a>
+            </p>
+        </main>
+
+{{template "footer"}}
+{{end}}
+
+    
